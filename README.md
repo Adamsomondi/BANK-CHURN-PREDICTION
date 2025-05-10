@@ -48,13 +48,35 @@ The model considers various customer attributes including:
 - Active Member Status
 - Estimated Salary
 
-## Results
-[Include your model's performance metrics here]
-- Accuracy: 0.999
-- Precision: 1.000
-- Recall: 1.000
-- F1-Score: 1.000
+## Model Selection
+Two models were evaluated for binary classification:
 
+Logistic Regression
+Random Forest Classifier
+
+Both models initially demonstrated near-perfect performance on the test set, each achieving an accuracy of 0.999 and an F1-score of 0.999. 
+Confusion matrices showed minimal misclassification, with only one instance misclassified by each model.
+
+Hyperparameter Tuning
+Logistic Regression was optimized using Grid Search with the best parameters:
+
+C: 0.01
+
+penalty: l2
+
+solver: liblinear
+
+## Cross-Validation
+
+To ensure robustness, 5-fold cross-validation was performed on both models:
+
+Logistic Regression Mean Accuracy: 0.9986
+
+Random Forest Mean Accuracy: 0.9986
+
+Standard Deviation (both models): ~0.00196
+
+Despite identical cross-validation metrics, Random Forest was selected as the final model due to its strong performance and robustness to feature scaling and outliers.
 
 
 ## Contact
