@@ -48,26 +48,30 @@ The model considers various customer attributes including:
 - Active Member Status
 - Estimated Salary
 
-## Model Selection
-Two models were evaluated for binary classification:
+## Modeling
 
-Logistic Regression
-Random Forest Classifier
+### Model Selection
 
-Both models initially demonstrated near-perfect performance on the test set, each achieving an accuracy of 0.999 and an F1-score of 0.999. 
-Confusion matrices showed minimal misclassification, with only one instance misclassified by each model.
+Two classification models were evaluated:
 
-Hyperparameter Tuning
-Logistic Regression was optimized using Grid Search with the best parameters:
+- **Logistic Regression**
+- **Random Forest Classifier**
 
-C: 0.01
+Both models performed exceptionally well on the test dataset:
 
-penalty: l2
+| Metric              | Logistic Regression | Random Forest |
+|---------------------|---------------------|---------------|
+| Accuracy            | 0.999               | 0.999         |
+| F1-Score            | 0.999               | 0.999         |
 
-solver: liblinear
+- **True Negatives (TN)**: 1606 — Class 0 correctly predicted  
+- **False Positives (FP)**: 1 — Class 0 incorrectly predicted as Class 1  
+- **False Negatives (FN)**: 1 — Class 1 incorrectly predicted as Class 0  
+- **True Positives (TP)**: 392 — Class 1 correctly predicted  
 
-## Cross-Validation
+This confusion matrix highlights the model's near-perfect classification ability, with only two misclassifications out of 2000 total samples. The low number of false positives and false negatives suggests strong precision and recall for both classes.
 
+ ## Cross-Validation
 To ensure robustness, 5-fold cross-validation was performed on both models:
 
 Logistic Regression Mean Accuracy: 0.9986
@@ -76,12 +80,11 @@ Random Forest Mean Accuracy: 0.9986
 
 Standard Deviation (both models): ~0.00196
 
-Despite identical cross-validation metrics, Random Forest was selected as the final model due to its strong performance and robustness to feature scaling and outliers.
-
+Despite identical cross-validation metrics,
+Random Forest was selected as the final model due to its strong performance and robustness to feature scaling and outliers.
 
 ## Contact
-- Created by [@Adamsomondi](https://github.com/Adamsomondi)
-- Medium Link: [https://github.com/Adamsomondi/BANK-CHURN-PREDICTION](https://github.com/Adamsomondi/BANK-CHURN-PREDICTION)
+- Medium Link: 
 
 
 
