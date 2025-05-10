@@ -84,7 +84,7 @@ Despite identical cross-validation metrics,
 Random Forest was selected as the final model due to its strong performance and robustness to feature scaling and outliers.
 
 ## Contact
-- Medium Link: 
+- Medium Link: [https://medium.com/@adamsnogo025/predicting-bank-customer-churn-with-machine-learning-a-practical-approach-to-boost-retention-e1bbfd0326bc]
 
 
 
